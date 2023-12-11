@@ -18,11 +18,11 @@ public class Input0107Controller {
 	
 	@RequestMapping(path = "/lesson01_07/login", method = RequestMethod.POST)
 	public String doLogin(String userId, String password) {
-		if (userId.equals(password)) {
-			return "lesson01_07/top";
-			
-		} else if (userId == "" || password == "") {
+		if (userId == "" || password == "") {
 			return "lesson01_07/login";
+			
+		} else if (userId.equals(password)) {
+			return "redirect:/lesson01_07/top";
 			
 		} else {
 			return "lesson01_07/login";
