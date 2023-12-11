@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+	 	<tr>
+	 		<th>番号</th>
+	 		<th>ユーザーID</th>
+	 	</tr>
+	 	<tr th:each="user: ${TrainingUsers}">
+	 		<td th:text="${user.id}"></td>
+	 		<td th:text="${user.userId}"></td>
+	 	</tr>
+	</table>
+</body>
+</html>
