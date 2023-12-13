@@ -28,7 +28,7 @@ public class User0203Controller {
 		TrainingUser trainingUser = repository.getReferenceById(id);
 		Userbean userbean = new Userbean();
 		BeanUtils.copyProperties(trainingUser, userbean);
-		model.addAttribute("TrainingUsers", userbean);
+		model.addAttribute("TrainingUser", userbean);
 		return "lesson02_03/show";
 	}
 }
