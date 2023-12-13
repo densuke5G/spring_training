@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>番号</th>
+			<td th:text="${user.id}"></td>
+		</tr>
+		<tr>
+			<th>ユーザーID</th>
+			<td th:text="${user.userId}"></td>
+		</tr>
+	</table>
+	<a th:href="@{/lesson02_08/new}">戻る</a>
+</body>
+</html>

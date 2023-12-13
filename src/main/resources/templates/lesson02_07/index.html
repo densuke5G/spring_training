@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/lesson02_07/search}" method="post">
+		商品名検索：<input type="text" name="name"> 
+		<input type="submit" value="検索">
+	</form>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>商品名</th>
+			<th>在庫数</th>
+			<th>入荷日</th>
+		</tr>
+		<tr th:each="food: ${foods}">
+			<td th:text="${food.id}"></td>
+			<td th:text="${food.name}"></td>
+			<td th:text="${food.stock}"></td>
+			<td th:text="${food.arrivalDate}"></td>
+		</tr>
+	</table>
+</body>
+</html>

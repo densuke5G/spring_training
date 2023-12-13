@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>ユーザーを新規登録します</p>
+	<p>ユーザーIDとパスワードを入力して「登録」をクリックしてください</p>
+	<form method="post" th:action="@{/lesson02_08/new}">
+		ユーザーID：<input type="text" name="userId">
+		パスワード：<input type="text" name="password">
+		<input type="submit" value="登録">
+	</form>
+</body>
+</html>
