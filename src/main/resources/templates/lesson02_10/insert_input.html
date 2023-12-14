@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>新規登録</p>
+	<form method="post" th:action="@{/lesson02_10/insert}">
+		商品名：<input type="text" name="name">
+		在庫数：<input type="text" name="stock">
+		<input type="hidden" name="arrivalDate" value="2017/04/01">
+		<input type="submit" value="登録">
+	</form>
+</body>
+</html>

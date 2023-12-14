@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>更新</p>
+	<form method="post" th:action="@{/lesson02_10/update/}+ ${food.id}">
+		商品名：<input type="text" name="name" th:value="${food.name}">
+		在庫数：<input type="text" name="stock" th:value="${food.stock}">
+		<input type="submit" value="更新">
+	</form>
+</body>
+</html>
