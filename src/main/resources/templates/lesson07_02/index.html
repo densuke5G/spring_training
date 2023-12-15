@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.information{
+		color: red;
+	}
+</style>
+</head>
+<body>
+	<form th:action="@{/lesson07_02/index}">
+		<input type="text" name="word">
+		<input type="submit">
+	</form>
+	<p th:if="${noword}" th:text="${noword}"></p>
+	<p th:if="${word}" th:text="${word}"></p>
+</body>
+</html>

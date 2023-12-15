@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">
+	 	<tr>
+	 		<th>社員番号</th>
+	 		<th>社員ID</th>
+	 		<th>部署ID</th>
+	 		<th>部署名</th>
+	 	</tr>
+	 	<tr th:each="employee: ${employees}">
+	 		<td th:text="${employee.id}"></td>
+	 		<td th:text="${employee.userId}"></td>
+	 		<td th:text="${employee.department.id}"></td>
+	 		<td th:text="${employee.department.name}"></td>
+	 	</tr>
+	</table>
+</body>
+</html>

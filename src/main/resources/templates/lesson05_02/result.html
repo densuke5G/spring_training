@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ログインユーザー名:[<span th:text="${param.userId}"></span>]
+<a th:href="@{/lesson05_02/new}">別のユーザーを登録</a>
+</body>
+</html>
