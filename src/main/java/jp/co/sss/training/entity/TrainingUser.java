@@ -5,11 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "TrainingUser")
+@NamedQuery(name = "findByNameLike", query = "SELECT i FROM TrainingUser i WHERE i.userId LIKE :keyword")
 public class TrainingUser {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_training_user_gen")

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/lesson04_03/searchName}">
+		<input type="text" name="keyword">
+		<input type="submit">
+	</form>
+	<p th:if="${count} != null" th:text="該当ユーザー数：+ ${count} + 人"></p>
+	<table>
+	 	<tr>
+	 		<th>番号</th>
+	 		<th>ユーザーID</th>
+	 	</tr>
+	 	<tr th:each="user: ${TrainingUsers}">
+	 		<td th:text="${user.id}"></td>
+	 		<td th:text="${user.userId}"></td>
+	 	</tr>
+	</table>
+</body>
+</html>
